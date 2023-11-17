@@ -118,7 +118,7 @@
   animation: jump 0.5s ease-in-out infinite;
 }
 
-.all-cards{
+.all-cards {
   display: flex;
   flex-direction: column;
   gap:50px;
@@ -154,7 +154,6 @@
   text-transform: uppercase;
   font-size: var(--menu-font-size);
   font-family: var(--accent-font);
-  color: var(--accent-color);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 0.5px var(--stroke-color);
