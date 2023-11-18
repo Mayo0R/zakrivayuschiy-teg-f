@@ -14,11 +14,20 @@
 
 */
 
+body {
+  font-family: var(--main-font-nv), sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: var(--main-font), sans-serif;
+  }
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
 
-  font-family: var(--main-font, sans-serif);
   font-variation-settings: var(--main-font-text-weight);
   background-color: var(--bg-color);
   color: var(--accent-color);
@@ -121,7 +130,7 @@
 .all-cards {
   display: flex;
   flex-direction: column;
-  gap:50px;
+  gap: 50px;
 }
 
 .card {
@@ -156,7 +165,18 @@
   font-family: var(--accent-font);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 0.5px var(--stroke-color);
+  text-shadow: 0.5px var(--stroke-color);
+}
+
+@supports (-webkit-text-stroke: 0.5px var(--stroke-color)) {
+  .car-title {
+    -webkit-text-stroke: 0.5px var(--stroke-color);
+    text-shadow: none;
+  }
+}
+
+.card-title-transform {
+  text-transform: lowercase;
 }
 
 .card-content {
@@ -420,11 +440,11 @@ dialog::backdrop {
 
 @keyframes jump {
   0% {
-    translate: 0px;
+    transform: translateX(0px);
   }
 
   100% {
-    translate: 4px;
+    transform: translateX(4px);
   }
 }
 
