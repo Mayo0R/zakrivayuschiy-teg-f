@@ -1,12 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: Inter-Variable;
-  --main-font-nv: Inter;
+  --main-font: Inter;
   --accent-font: PressStart2P-Regular;
   --main-font-title-weight: 700;
-  --wgth: 700;
   --main-font-text-weight: 400;
-  --wdth:400;
   --bg-color: #fff;
   --accent-color: #000;
   --bg-image: repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),

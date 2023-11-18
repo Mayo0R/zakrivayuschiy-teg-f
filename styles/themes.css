@@ -6,8 +6,7 @@
 */
 
 :root.theme-light {
-  --main-font: Inter-Variable;
-  --main-font-nv: Inter;
+  --main-font: Inter;
   --accent-font: PressStart2P-Regular;
   --main-font-title-weight: 700;
   --main-font-text-weight: 400;
@@ -25,8 +24,7 @@
 }
 
 :root.theme-dark {
-  --main-font: Inter-Variable;
-  --main-font-nv: Inter;
+  --main-font: Inter;
   --accent-font: PressStart2P-Regular;
   --main-font-title-weight: 785;
   --main-font-text-weight: 465;
@@ -46,8 +44,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Дублируем переменные светлой темы */
-    --main-font: Inter-Variable;
-    --main-font-nv: Inter;
+    --main-font: Inter;
     --accent-font: PressStart2P-Regular;
     --main-font-title-weight: 785;
     --main-font-text-weight: 465;
