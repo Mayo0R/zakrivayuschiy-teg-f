@@ -14,20 +14,9 @@
 
 */
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: var(--main-font), sans-serif;
-  }
-}
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-
+  min-block-size: 100vb;
+  font-family: var(--main-font, Arial);
   font-variation-settings: "wght" var(--main-font-text-weight);
   background-color: var(--bg-color);
   color: var(--accent-color);
@@ -38,6 +27,12 @@ body {
   align-items: center;
 }
 
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: "Inter", sans-serif;
+  }
+}
+
 .clamp-size {
   inline-size: clamp(375px, 50%, 700px);
 }
@@ -46,7 +41,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-block-start: 136px;
-  padding-block-end: 25px;
+  padding-block-end: 23px;
   margin: 100px 2px 100px 2px;
   border: 2px solid var(--accent-color);
   background-color: var(--bg-color);
@@ -142,7 +137,7 @@ body {
 .card-header-title {
   font-size: var(--main-font-size);
   font-variation-settings: "wght" var(--main-font-title-weight);
-  padding: 3px 0px 3px 10px;
+  padding: 3px 0px 7px 10px;
 }
 
 .car-container {
@@ -209,7 +204,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  margin: 25px;
+  margin: 23px 25px 26px 25px;
 }
 
 .card-text {
@@ -474,22 +469,24 @@ dialog::backdrop {
   }
 }
 
-@media (width <= 375px) {
+@media (width < 376px) {
   .clamp-size {
     inline-size: 100vw;
   }
-
   .header {
     padding-block-start: 120px;
   }
-  .card-header-title {
-    padding: 6px 10px 6px 10px;
-  }
 
+  .card-header-title {
+    padding: 3px 10px 4px 10px;
+  }
+  .card-content {
+    margin: 26px 29px 26px 25px;
+  }
   .car-title {
     right: 11px;
   }
-
+/*остановился тут*/
   .card__save-button {
     width: 306px;
     height: 80px;
