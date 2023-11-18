@@ -28,7 +28,7 @@ body {
   min-inline-size: 320px;
   min-block-size: 100dvb;
 
-  font-variation-settings: var(--main-font-text-weight);
+  font-variation-settings: "wght" var(--main-font-text-weight);
   background-color: var(--bg-color);
   color: var(--accent-color);
   background-image: var(--bg-image);
@@ -142,7 +142,7 @@ body {
 
 .card-header-title {
   font-size: var(--main-font-size);
-  font-variation-settings: var(--main-font-title-weight);
+  font-variation-settings: "wght" var(--main-font-title-weight);
   padding: 3px 0px 3px 10px;
 }
 
@@ -153,6 +153,34 @@ body {
 .picture {
   object-position: center;
   object-fit: cover;
+}
+
+.filter-brightness {
+  filter: brightness(200%);
+}
+
+.filter-blur {
+  filter: blur(0.6rem);
+}
+
+.filter-opacity {
+  filter: opacity(0.5);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.7);
+}
+.filter-saturate {
+  filter: saturate(558%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(-90deg);
+}
+
+.filter-sepia-invert {
+  filter: sepia(80%);
+  filter: invert(0.7);
 }
 
 .car-title {
@@ -188,7 +216,7 @@ body {
 
 .card-text {
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: var(--main-font-text-weight);
+  font-variation-settings: "wght" var(--main-font-text-weight);
   font-size: var(--main-font-size);
   line-height: 21px; /* 116.667% */
 }
@@ -398,7 +426,7 @@ dialog::backdrop {
 }
 .text-decor {
   font-family: var(--accent-font);
-  font-weight: var(--main-font-text-weight);
+  font-variation-settings: "wght" var(--main-font-text-weight);
   font-size: var(--menu-font-size);
   color: var(--accent-color);
   line-height: 150%; /* 21px */
@@ -408,7 +436,7 @@ dialog::backdrop {
 .button-cancel {
   min-inline-size: 293px;
   font-family: var(--accent-font);
-  font-weight: var(--main-font-text-weight);
+  font-variation-settings: "wght" var(--main-font-text-weight);
   font-size: var(--menu-font-size);
   line-height: 90%; /* 12.6px */
   text-transform: uppercase;
