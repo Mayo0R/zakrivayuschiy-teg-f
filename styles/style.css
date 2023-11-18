@@ -102,7 +102,7 @@
 .theme-menu__button::after {
   content: "";
   display: block;
-  height: 2px;
+  block-size: 2px;
   opacity: 0.6;
   background: var(--accent-color);
   transition: 0.3s ease;
@@ -113,8 +113,8 @@
 .theme-menu__button:disabled.theme-menu__button::before {
   content: "▶";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  inline-size: 14px;
+  block-size: 14px;
   color: var(--accent-color);
   opacity: 0.6;
   margin-left: -20px;
@@ -366,8 +366,8 @@
   border: 2px solid var(--accent-color);
   background: transparent;
   background-color: var(--bg-color);
-  min-width: 335px;
-  min-height: 51px;
+  min-inline-size: 335px;
+  min-block-size: 51px;
 }
 
 .floppy {
@@ -378,9 +378,8 @@
 .card__background-save::before {
   content: "";
   position: absolute;
-
-  min-width: 335px;
-  min-height: 51px;
+  min-inline-size: 335px;
+  min-block-size: 51px;
   background-color: var(--accent-color);
   transform-origin: top left;
   transform: scaleX(0);
@@ -425,7 +424,10 @@ dialog::backdrop {
   line-height: 150%; /* 21px */
   text-transform: uppercase;
 }
-
+.f-size {
+  inline-size: 54.33px;
+  block-size: 54.33px;
+}
 .button-cancel {
   min-inline-size: 293px;
   font-family: var(--accent-font);
@@ -486,17 +488,24 @@ dialog::backdrop {
   .car-title {
     right: 11px;
   }
-/*остановился тут*/
+
   .card__save-button {
-    width: 306px;
-    height: 80px;
+    flex-direction: column;
+    min-inline-size: 306px;
+    min-block-size: 80px;
   }
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+  .f-size {
+    inline-size: 54.33px;
+    block-size: 54.33px;
+  }
+
   .card__background-save::before {
-    margin-inline-start: -34px;
-    margin-top: -15px;
-    width: 334px;
-    height: 50px;
-    /*тут надо подогнать*/
+    min-inline-size: 306px;
+    min-block-size: 80px;
   }
   dialog {
     max-inline-size: 341px;
