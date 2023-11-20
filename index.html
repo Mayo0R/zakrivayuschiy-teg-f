@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="light dark" />
     <script src="./scripts/set-theme.js"></script>
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
@@ -18,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header clamp-size">
-      <div class="header-title">&lt;/HTML&gt;</div>
+      <a class="header-title">&lt;/HTML&gt;</a>
       <h1 class="header-text">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -56,8 +56,7 @@
             <img
               class="picture"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Фургон-трек в красно-фиолетовых цветах едет по дороге"
             />
             <p class="car-title">&lt;/HTML&gt;</p>
           </div>
@@ -116,8 +115,7 @@
             <img
               class="picture filter-brightness"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек в красно-фиолетовых цветах едет по дороге, но яркость картинки 200%"
             />
             <p class="car-title">&lt;/HTML&gt;</p>
           </div>
@@ -178,8 +176,7 @@
             <img
               class="picture filter-blur"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек в красно-фиолетовых цветах едет по дороге, но теперь заблюрен"
             />
             <p class="car-title">&lt;CSS&gt;</p>
           </div>
@@ -238,8 +235,7 @@
             <img
               class="picture filter-opacity"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек в красно-фиолетовых цветах едет по дороге, но теперь прозрачность картинки 50%"
             />
             <p class="car-title card-title-transform">&lt;desigions&gt;</p>
           </div>
@@ -300,8 +296,7 @@
             <img
               class="picture filter-grayscale"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Теперь тотже Фургон-трек стал черно-белым"
             />
             <p class="car-title card-title-transform">care</p>
           </div>
@@ -363,8 +358,7 @@
             <img
               class="picture filter-saturate"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек в красно-фиолетовых цветах едет по дороге, но теперь насыщенность цветов картинки 550%"
             />
             <p class="car-title card-title-transform">&lt;support&gt;</p>
           </div>
@@ -423,8 +417,7 @@
             <img
               class="picture filter-hue-rotate"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек в красно-фиолетовых цветах едет по дороге, но теперь оттенок элементов повернут по цветовому кругу на -90градусов"
             />
             <p class="car-title card-title-transform">
               &lt;lifes-style: none;&gt;
@@ -487,8 +480,7 @@
             <img
               class="picture filter-sepia-invert"
               src="./images/car_1.png"
-              alt="car"
-              style="width: 100%"
+              alt="Тотже фургон-трек едет по дороге, но теперь фото в ретро стиле и меняется негатив изображения"
             />
             <p class="car-title card-title-transform">&lt;experience&gt;</p>
           </div>
@@ -552,8 +544,12 @@
           onclick="window['dialog-id'].showModal()"
           aria-controls="dialog-id"
         >
-          <svg class="floppy" viewbox="0 0 28 28" width="21" height="21">
-            <use href="../zakrivayuschiy-teg-f/svg/floppy.svg#floppy"></use>
+          <svg
+            class="floppy"
+            viewbox="0 0 28 28"
+            fill="var(--button-text-color)"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
         </button>
@@ -561,18 +557,20 @@
       <dialog id="dialog-id">
         <div class="container-push">
           <div class="save-push">
-            <svg class="floppy f-size" viewbox="0 0 39 39">
-              <use href="../zakrivayuschiy-teg-f/svg/floppy.svg#floppy"></use>
+            <svg
+              class="floppy f-size"
+              viewbox="0 0 39 39"
+              fill="var(--button-text-color)"
+            >
+              <use href="./svg/floppy.svg#floppy"></use>
             </svg>
             <span class="text-decor">Вставьте дискету, чтобы продолжить</span>
           </div>
-          <button
-            class="button-cancel"
-            type="button"
-            onclick="window['dialog-id'].close()"
-          >
-            ОК
-          </button>
+          <form method="dialog">
+            <button class="button-cancel card__background-cancel">
+              <span class="button__text">ОК</span>
+            </button>
+          </form>
         </div>
       </dialog>
     </main>
