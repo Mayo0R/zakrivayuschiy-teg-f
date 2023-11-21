@@ -21,6 +21,7 @@
   --button-text-color: #fff;
   --contour-heart: black;
   --red-heart: #ff0000;
+  --floppy-color:#fff;
 }
 
 :root.theme-dark {
@@ -39,6 +40,7 @@
   --button-text-color: #00cc14;
   --contour-heart: #00cc14;
   --red-heart: #ff0000;
+  --floppy-color:#00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,5 +61,6 @@
     --button-text-color: #00cc14;
     --contour-heart: #00cc14;
     --red-heart: #ff0000;
+    --floppy-color:#00cc14;
   }
 }

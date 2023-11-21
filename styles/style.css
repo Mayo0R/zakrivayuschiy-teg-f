@@ -16,6 +16,7 @@
 body {
   background-image: var(--bg-image);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .page {
@@ -412,8 +413,9 @@ body {
   transform: scaleX(1);
 }
 
-dialog {
+dialog[open] {
   border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
 }
 
 .container-push {
@@ -427,7 +429,7 @@ dialog {
 
 dialog::backdrop {
   opacity: 0.75;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .save-push {
@@ -435,6 +437,7 @@ dialog::backdrop {
   grid-template-columns: 39px 234px;
   align-items: center;
   gap: 20px;
+  fill: var(--floppy-color);
 }
 .text-decor {
   font-family: var(--accent-font), fantasy;
@@ -471,36 +474,6 @@ dialog::backdrop {
 
 .card__background-cancel:hover::before {
   transform: scaleX(1);
-}
-
-@keyframes redsparks {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes scaleheart {
-  0% {
-    scale: 1;
-  }
-
-  100% {
-    scale: 1.5;
-  }
-}
-
-@keyframes jump {
-  0% {
-    transform: translateX(0px);
-  }
-
-  100% {
-    transform: translateX(4px);
-  }
 }
 
 @media (width < 376px) {
